@@ -3,7 +3,7 @@ const myobj = {
     cpp: "c++",
     rb:"rubby",
     swift:"swift by apple"
-}
+} 
 
 // for in loop
 
