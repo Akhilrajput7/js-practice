@@ -6,11 +6,46 @@
     <title>DOM</title>
 </head>
 <body style="background-color: black; color: white;">
-     <ul class="Language">
+     <ul class="language">
         <li>Javascript</li>
      </ul>
 </body>
-<script>
 
+<script>
+ const lang =  document.querySelector('.language')
+  lang.style.backgroundColor = 'red'
+
+   function addLanuage (langName){
+      const list = document.createElement('li')
+      list.innerHTML = langName
+      document.querySelector('.language').appendChild(list)
+   }
+
+   addLanuage("ES6")
+   addLanuage("Typescript")
+
+   function addOptiLang (langName){
+     const li = document.createElement('li')
+     li.appendChild(document.createTextNode(langName))
+     document.querySelector('.language').appendChild(li)
+   }
+
+   addOptiLang('java')
+   addOptiLang('cpp')
+
+
+//    edit values
+ const secondLang = document.querySelector('li:nth-child(2)')
+ const neewLi = document.createElement('li')
+ neewLi.textContent = 'Go lang'
+ secondLang.replaceWith(neewLi)
+
+ const firstLang = document.querySelector('li:nth-child(1)')
+   firstLang.outerHTML = "<li>TypeScript</li>"
+
+//    remove element
+
+const lastRemove = document.querySelector('li:last-child')
+    lastRemove.remove()
 </script>
 </html>
