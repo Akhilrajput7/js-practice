@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Await</title>
+</head>
+
+<body>
+    <h1>javascript</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+</body>
+<script>
+    //    const intervalHnadler = function(){
+    //     console.log(Date.now() ," hii")
+    //    } 
+   
+     var myinterval ;
+        
+      function myinterval() {
+      myInterval = setInterval(() => {
+      console.log(Date.now(), "hii");
+    }, 2000); // Runs every 2 seconds
+  }
+
+
+        function stopCounter() {
+    clearInterval(myInterval);
+    console.log("Counter stopped.");
+  }
+         
+   
+
+    const start =  document.getElementById('start').addEventListener('click' , myinterval  )
+ 
+    const stop  =  document.getElementById('stop').addEventListener('click' , stopCounter )
+
+    
+
+
+
+</script>
+
+</html>
